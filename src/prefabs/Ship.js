@@ -4,7 +4,8 @@ class Ship extends Phaser.GameObjects.Sprite {
         
         scene.add.existing(this)
         this.shipSpeed = 3
-        this.isHit = false 
+        this.isHit = false
+        this.texture 
         
 
     }
@@ -18,11 +19,14 @@ class Ship extends Phaser.GameObjects.Sprite {
         
         if(keyLeft.isDown && this.x >= this.width / 2) {
             this.x -= this.shipSpeed
+            this.setTexture('planeR')
+
             //console.log('leftn')
         } 
         if(keyRight.isDown && this.x <= w - this.width / 2) {
             this.x += this.shipSpeed 
             //console.log('rightn')
+            this.setTexture('planeL')
         }
         if(keyUp.isDown && this.y >= -this.height / 2) {
             this.y -= this.shipSpeed
@@ -32,6 +36,7 @@ class Ship extends Phaser.GameObjects.Sprite {
             this.y += this.shipSpeed
             //console.log('downers')
         }
+        
         /*} else if(keyDown.isDown && keyLeft.isDown) {
             this.x && this.y + this.shipSpeed*/
     }
