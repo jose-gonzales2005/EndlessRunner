@@ -26,7 +26,7 @@ class Menu extends Phaser.Scene {
 
 
         let title02 = this.add.text(centerX, centerY + 100, 'Space to Play, Arrow Keys to Fly, Make it All the Way', 64).setOrigin(0.5).setTint(0xff00ff)
-        let title01 = this.add.text(centerX, centerY, 'Wings of Glory', 64).setOrigin(0.5).setTint(0xff00ff)
+        let title01 = this.add.text(centerX, centerY, 'Wings of Glory', {fontSize: '80px'}).setOrigin(0.5).setTint(0xff00ff)
         //this.add.text(centerX, centerY - 400, 'Avoid the obstacles in the ocean and make it safely home using the Arrow Keys!', menuConfig).setOrigin(0.5)        
 
         //menuConfig.backgroundColor = '#E30B5C'
